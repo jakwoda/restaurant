@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="styles.css?v=1.0">
+
+</head>
+
+<body>
+
+ <h1>bands</h1>
+ <main id="app"> </main>
+
+ <template id="bandTemplate">
+ 	<h1>Name goes here</h1>
+ 	<h2 class="members"><span>VALUE</span> members</h2>
+
+
+
+ </template>
+
+
+
+
+
+  <script>
+
+	  const boybands =[
+		  {
+		name: "NSYNC",
+		members:"one that matters"
+
+	  },
+
+		  	  {
+		name: "JPEG MAFIA",
+		members:"one"
+
+	  },
+		    	  {
+		name: "BROCKHAMPTON",
+		members:"a lot"
+
+	  },{
+		  name: "THE BEATLES",
+		members:"four"
+
+	  },
+		  	{
+		name: "Anele Rubinaite",
+		dob:{
+			year: 1995,
+			month: 9,
+			day: 23
+		},
+		email: "anele@gmail.com",
+		phone: 2946283,
+		country: "Lithuania",
+		hobbies: ["friends", "writing"],
+		married: false,
+		gender: "Female"
+	},
+
+
+
+			];
+
+
+
+	  const template = document.querySelector("#bandTemplate").content;
+
+	    boybands.forEach(listBand);
+
+	function listBand(band){
+		const clone = template.cloneNode(true);
+
+		clone.querySelector("h1").textContent=band.name;
+		clone.querySelector(".members span").textContent=band.members;
+
+		document.querySelector("#app").appendChild(clone);
+	}
+
+
+	</script>
+</body>
+</html>

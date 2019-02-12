@@ -1,0 +1,180 @@
+body{display: grid;
+font-family: 'Arvo', serif;
+}
+h1{
+	font-family: 'Bevan', cursive;
+
+}
+main {
+    display: grid;
+    grid-gap: 1em;
+	width: 100vw;
+	grid-template-columns: 1fr;
+
+}
+.main{
+	border: solid black 2px;
+	border-right: 0px;
+	border-top:0px;
+}
+
+
+img {
+  -webkit-filter: blur(1px); /* Safari 6.0 - 9.0 */
+  filter: blur(1px);
+	filter: grayscale(25%)
+;
+
+
+}
+
+img:hover{
+	 filter: blur();
+	transition: all 0.5s;
+	transition-timing-function: (cubic-bezier(0,.66,.83,.67));
+
+
+
+
+
+}
+
+
+
+
+@media (min-width: 350px) {
+    main {
+        grid-template-columns: 1fr;
+        }
+    }
+
+
+
+@media (min-width: 600px) {
+    main {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+    }
+}
+
+
+
+body div {
+padding: .5em;
+
+}
+
+
+
+.color{background-color: red;}
+
+
+/* style */
+.logo{
+	color: white;
+background: url('imgs/large/baltiskbondesuppe.jpg') no-repeat;
+ background-size: 100%;
+	background-position: center;
+text-align: center;
+overflow: hidden;}
+.start{padding-left: 4em;}
+.menu{text-align: center;}
+
+
+.alcohol{width:10%;}
+.alergy{width:10%;}
+.discount{width:10%;}
+.soldout{width:15%;
+text-decoration: line-through;
+color:red;}
+#soldout{
+	font-weight: bolder;
+	color: red;
+}
+#discount{color:red;
+font-style: italic;}
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+
+  top:0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+
+
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  bottom: 2em;
+  background-color: #fefefe;
+  width: 90%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+  border: solid black .1em;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size:1em;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 1em;
+
+}
+
+.modal-body {padding: 1em;}
+
+.modal-footer {
+  padding:1em;
+  color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 2em; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 2em; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+

@@ -1,0 +1,44 @@
+h2 {
+	padding: 1em;
+	border: solid black .25em;
+}
+
+h1 {
+
+	padding: 1em;
+	border: solid black .25em;
+}
+
+#bandTemplate {
+	padding: 1em;
+	border: solid black .25em;
+}
+
+main div {
+	align-self: center;
+	padding: 1em;
+	border: solid black .25em;
+}
+
+@media (min-width: 500px) {
+
+
+	main {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+		grid-gap: 1em;
+		padding: 1em;
+		border: solid black .5em;
+
+
+	}
+}
+
+
+@media (min-width: 700px) {
+
+
+	main {
+		grid-template-columns: 1fr 1fr;
+	}
+}
